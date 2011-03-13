@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Title:</b>
+  <%= @news_link.title %>
+</p>
+
+<p>
+  <b>Added by:</b>
+  <%= @news_link.added_by %>
+</p>
+
+<p>
+  <b>Added on:</b>
+  <%= @news_link.added_on %>
+</p>
+
+<p>
+  <b>Total parts:</b>
+  <%= @news_link.total_parts %>
+</p>
+
+<p>
+  <b>Video link:</b>
+  <%= @news_link.video_link %>
+</p>
+
+<p>
+  <b>Image link:</b>
+  <%= @news_link.image_link %>
+</p>
+
+<p>
+  <b>Active:</b>
+  <%= @news_link.active %>
+</p>
+
+
+<%= link_to 'Edit', edit_news_link_path(@news_link) %> |
+<%= link_to 'Back', news_links_path %>

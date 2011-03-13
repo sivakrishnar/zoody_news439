@@ -1,4 +1,6 @@
 ZoodyNews::Application.routes.draw do
+  resources :news_links
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
