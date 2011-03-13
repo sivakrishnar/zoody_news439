@@ -5,7 +5,6 @@
     <th>Title</th>
     <th>Added by</th>
     <th>Added on</th>
-    <th>Total parts</th>
     <th>Video link</th>
     <th>Image link</th>
     <th>Active</th>
@@ -19,17 +18,16 @@
     <td><%= news_link.title %></td>
     <td><%= news_link.added_by %></td>
     <td><%= news_link.added_on %></td>
-    <td><%= news_link.total_parts %></td>
     <td><%= news_link.video_link %></td>
     <td><%= news_link.image_link %></td>
     <td><%= news_link.active %></td>
     <td><%= link_to 'Show', news_link %></td>
     <td><%= link_to 'Edit', edit_news_link_path(news_link) %></td>
-    <td><%= link_to 'Destroy', news_link, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%= link_to 'Destroy', news_link, :confirm => 'Do you want to delete, Are you sure?', :method => :delete %></td>
   </tr>
 <% end %>
 </table>
 
 <br />
 
-<%= link_to 'New News link', new_news_link_path %>
+<%= link_to 'Add New', new_news_link_path %>
