@@ -16,17 +16,17 @@
 </p>
 
 <p>
-  <b>Video link:</b>
-  <%= @news_link.video_link %>
+  <b>Video link: </b><%= @news_link.video_link %>
+  <p><iframe title="YouTube video player" width="425" height="349" src="http://www.youtube.com/embed/<%= @news_link.video_link %>?rel=0" frameborder="0" allowfullscreen></iframe></p>
 </p>
 
 <p>
-  <b>Image link:</b>
-  <%= @news_link.image_link %>
+  <b>Image link:</b><%= @news_link.image_link %>
+  <p><img src = "http://img.youtube.com/vi/<%= @news_link.image_link %>/1.jpg" /></p>
 </p>
 
 <p>
-  <b>Active:</b>
+  <b>Active: (0 = true, 1 = false)</b>
   <%= @news_link.active %>
 </p>
 
