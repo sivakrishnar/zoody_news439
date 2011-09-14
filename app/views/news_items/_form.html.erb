@@ -1,0 +1,37 @@
+<%= form_for(@news_item) do |f| %>
+  <% if @news_item.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@news_item.errors.count, "error") %> prohibited this news_item from being saved:</h2>
+
+      <ul>
+      <% @news_item.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :title %><br />
+    <%= f.text_field :title %>
+  </div>
+  <div class="field">
+    <%= f.label :added_on %><br />
+    <%= f.datetime_select :added_on %>
+  </div>
+  <div class="field">
+    <%= f.label :content %><br />
+    <%= f.text_area :content %>
+  </div>
+  <div class="field">
+    <%= f.label :added_by %><br />
+    <%= f.text_area :added_by %>
+  </div>
+  <div class="field">
+    <%= f.label :active %><br />
+    <%= f.check_box :active %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -10,7 +10,17 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110313232116) do
+ActiveRecord::Schema.define(:version => 20110914021559) do
+
+  create_table "news_items", :force => true do |t|
+    t.string   "title"
+    t.datetime "added_on"
+    t.text     "content"
+    t.text     "added_by"
+    t.boolean  "active"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "news_links", :force => true do |t|
     t.string   "title"
